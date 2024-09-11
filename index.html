@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DVR Hostel</title>
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DVR HOSTEL</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Our Hostel</h2>
+            <p>Your comfort is our priority</p>
+            <a href="#gallery" class="btn">View Rooms</a>
+        </div>
+    </section>
+
+    <section id="rooms" class="rooms-section">
+        <h2>Available Rooms</h2>
+        <div class="room-list">
+            <div class="room">
+                <h3>Single Room</h3>
+                <!-- <p>$50 per night</p> -->
+                <a href="#booking" class="btn">Book Now</a>
+            </div>
+            <div class="room">
+                <h3>Double Room</h3>
+                <!-- <p>$80 per night</p> -->
+                <a href="#booking" class="btn">Book Now</a>
+            </div>
+            <div class="room">
+                <h3>Deluxe Room</h3>
+                <!-- <p>$120 per night</p> -->
+                <a href="#booking" class="btn">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Room Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="/image/room1.jpg" alt="Room Image 1" class="thumbnail" onclick="openLightbox();currentSlide(1)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room2.jpg" alt="Room Image 2" class="thumbnail" onclick="openLightbox();currentSlide(2)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room3.jpg" alt="Room Image 3" class="thumbnail" onclick="openLightbox();currentSlide(3)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room4.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(4)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room5.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(5)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room6.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(6)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room7.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(7)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room8.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(8)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room9.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(9)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room10.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(10)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room11.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(11)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room12.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(12)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room13.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(13)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room14.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(14)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room15.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(15)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room16.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(16)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room17.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(17)">
+            </div>
+            <div class="gallery-item">
+                <img src="image/room18.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(18)">
+            </div>
+        </div>
+    
+        <!-- Lightbox Modal -->
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <div class="slides">
+                    <img src="image/room1.jpg" alt="Room Image 1">
+                </div>
+                <div class="slides">
+                    <img src="image/room2.jpg" alt="Room Image 2">
+                </div>
+                <div class="slides">
+                    <img src="image/room3.jpg" alt="Room Image 3">
+                </div>
+                <div class="slides">
+                    <img src="image/room4.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room5.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room6.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room7.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room8.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room9.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room10.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room11.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room12.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room13.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room14.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room15.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room16.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room17.jpg" alt="Room Image 4">
+                </div>
+                <div class="slides">
+                    <img src="image/room18.jpg" alt="Room Image 4">
+                </div>
+    
+                <!-- Next/Prev Controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="booking" class="booking-form">
+        <h2>Book a Room</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="room">Room Type</label>
+            <select id="room" name="room">
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="deluxe">Deluxe Room</option>
+            </select>
+
+            <label for="date">Check-in Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p><strong>Address:</strong> 03 Krishna Nagar, Khanna, Punjab, India</p>
+            <p><strong>Email:</strong> amit.btechcse@gmail.com</p>
+            <p><strong>Phone:</strong> +91 8809296250</p>
+        </div>
+        <div class="map-container">
+            <h3>Find Us on the Map</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434508248!2d144.96328021570712!3d-37.81361197975133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xb0f9383f1c8790f4!2sFederation%20Square!5e0!3m2!1sen!2s!4v1629271950829!5m2!1sen!2s" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <script src="/assets/script.js"></script>
+
+    <footer>
+        <p>&copy; 2024 DVR Hostel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
