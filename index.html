@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVR Hostel</title>
+    <title>SDS Hostels</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
     <header>
         <div class="logo">
-            <h1>DVR HOSTEL</h1>
+            <h1>SDS HOSTELS AND APARTMENTS</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#rooms">Rooms</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+            <nav>
+        
+                <ul id="navbar">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#rooms">Rooms</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="close-btn"><a href="javascript:void(0);" onclick="toggleMenu()"></a></li>
+                </ul>
+            </nav>
+
     </header>
 
     <section id="home" class="hero">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button> 
         <div class="hero-content">
             <h2>Welcome to Our Hostel</h2>
             <p>Your comfort is our priority</p>
@@ -50,132 +55,42 @@
         </div>
     </section>
 
-    <section id="gallery" class="gallery-section">
-        <h2>Room Gallery</h2>
-        <div class="gallery-container">
-            <div class="gallery-item">
-                <img src="/image/room1.jpg" alt="Room Image 1" class="thumbnail" onclick="openLightbox();currentSlide(1)">
+    <section id="service" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-list">
+             
+            <div class="service">
+                <h3>Laundry Service</h3>
+                <a href="https://forms.gle/zi29JxUmiCqNdSdLA" style="color:rgb(23, 22, 22);" >Your clothes cleaned and freshened up with our in-house laundry service, available for all guests.</a>
             </div>
-            <div class="gallery-item">
-                <img src="image/room2.jpg" alt="Room Image 2" class="thumbnail" onclick="openLightbox();currentSlide(2)">
+            <div class="service">
+                <h3>Wi-Fi Service</h3>
+                <a href="https://forms.gle/Ds7E1b3ySzTWwsFA6" style="color: rgb(23, 22, 22);">Stay connected with our high-speed Wi-Fi available throughout the hostel, for work or leisure.</a>
             </div>
-            <div class="gallery-item">
-                <img src="image/room3.jpg" alt="Room Image 3" class="thumbnail" onclick="openLightbox();currentSlide(3)">
+            <div class="service">
+                <h3>Tiffin Service</h3>
+                <p>Enjoy home-cooked meals delivered right to your room with our affordable tiffin service.</p>
             </div>
-            <div class="gallery-item">
-                <img src="image/room4.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(4)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room5.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(5)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room6.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(6)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room7.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(7)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room8.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(8)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room9.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(9)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room10.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(10)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room11.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(11)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room12.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(12)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room13.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(13)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room14.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(14)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room15.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(15)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room16.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(16)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room17.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(17)">
-            </div>
-            <div class="gallery-item">
-                <img src="image/room18.jpg" alt="Room Image 4" class="thumbnail" onclick="openLightbox();currentSlide(18)">
-            </div>
+
         </div>
-    
-        <!-- Lightbox Modal -->
-        <div id="lightbox" class="lightbox">
-            <span class="close" onclick="closeLightbox()">&times;</span>
-            <div class="lightbox-content">
-                <div class="slides">
-                    <img src="image/room1.jpg" alt="Room Image 1">
-                </div>
-                <div class="slides">
-                    <img src="image/room2.jpg" alt="Room Image 2">
-                </div>
-                <div class="slides">
-                    <img src="image/room3.jpg" alt="Room Image 3">
-                </div>
-                <div class="slides">
-                    <img src="image/room4.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room5.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room6.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room7.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room8.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room9.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room10.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room11.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room12.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room13.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room14.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room15.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room16.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room17.jpg" alt="Room Image 4">
-                </div>
-                <div class="slides">
-                    <img src="image/room18.jpg" alt="Room Image 4">
-                </div>
-    
-                <!-- Next/Prev Controls -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <h2>Our Gallery</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="/image/room8.jpg" alt="Single Room">
+                <img src="/image/room5.jpg" alt="Double Room">
+                <img src="/image/room4.jpg" alt="Deluxe Room">
+                <img src="/image/room11.jpg" alt="Lobby">
+                <img src="/image/room3.jpg" alt="Dining Area">
             </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
         </div>
     </section>
     
-
+   
     <section id="booking" class="booking-form">
         <h2>Book a Room</h2>
         <form>
@@ -221,7 +136,16 @@
     <script src="./assets/script.js"></script>
 
     <footer>
-        <p>&copy; 2024 DVR Hostel. All rights reserved.</p>
+        <p>&copy; 2024 SDS HOSTELS AND APARTMENTS. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+    </script>
+ 
 </body>
 </html>
+ 
