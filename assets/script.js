@@ -1,50 +1,50 @@
-document.addEventListener("DOMContentLoaded", () => {
-    let slideIndex = 1;
+ let currentSlide = 0;
+let autoScrollInterval;
 
-    function openLightbox() {
-        document.getElementById("lightbox").style.display = "block";
-        showSlides(slideIndex);
-    }
+// Function to move slides manually or automatically
+function moveSlide(direction) {
+    const slides = document.querySelectorAll('.carousel-slide img');
+    const totalSlides = slides.length;
 
-    function closeLightbox() {
-        document.getElementById("lightbox").style.display = "none";
-    }
+    // Hide the current slide
+    slides[currentSlide].style.display = "none";
 
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
+    // Update the current slide index
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
+    // Show the new slide
+    slides[currentSlide].style.display = "block";
+}
 
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("slides");
-        
-        if (n > slides.length) {
-            slideIndex = 1;
-        } 
-        if (n < 1) {
-            slideIndex = slides.length;
+// Initialize the carousel on page load
+window.onload = () => {
+    const slides = document.querySelectorAll('.carousel-slide img');
+    
+    // Hide all slides except the first one
+    slides.forEach((slide, index) => {
+        if (index !== currentSlide) {
+            slide.style.display = "none";
         }
-        
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        
-        slides[slideIndex - 1].style.display = "block";
-    }
-
-    // Event listeners for lightbox controls
-    document.querySelectorAll('.thumbnail').forEach((img, index) => {
-        img.addEventListener('click', () => {
-            openLightbox();
-            currentSlide(index + 1);
-        });
     });
 
-    document.querySelector('.close').addEventListener('click', closeLightbox);
-    document.querySelector('.prev').addEventListener('click', () => plusSlides(-1));
-    document.querySelector('.next').addEventListener('click', () => plusSlides(1));
-});
+    // Start auto-scrolling every 5 seconds
+    autoScrollInterval = setInterval(() => moveSlide(1), 5000);
+};
+
+// Function to restart auto-scrolling after manual intervention
+function restartAutoScroll() {
+    clearInterval(autoScrollInterval);  // Stop current auto-scroll
+    autoScrollInterval = setInterval(() => moveSlide(1), 5000);  // Restart after 5 seconds
+}
+
+// Move slide when clicking "prev" or "next" and restart auto-scroll
+document.querySelector('.prev').onclick = function() {
+    moveSlide(-1);
+    restartAutoScroll();
+};
+
+document.querySelector('.next').onclick = function() {
+    moveSlide(1);
+    restartAutoScroll();
+};
 
